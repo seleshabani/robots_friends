@@ -35,7 +35,11 @@ export const CardsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: start;
   cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;

@@ -9,6 +9,8 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  transition: all 0.300ms ease;
   & img {
     width: 100%;
     height: 150px;
@@ -24,9 +26,14 @@ export const CardContainer = styled.div`
   }
   &:hover {
     background-color: rgb(238, 156, 25);
+    transition: 300ms;
+    transform: scale(1.1);
   }
   & a {
     text-decoration: none;
     color: black;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
   }
 `;
