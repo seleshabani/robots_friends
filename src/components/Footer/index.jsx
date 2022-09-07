@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../utils/context";
 import { FooterContainer,NightModeButton } from "./styled";
 
 const Footer = ()=>{
+    const {themeToggler} = useContext(ThemeContext);
     return (
         <FooterContainer>
-            <NightModeButton>Changer de mode</NightModeButton>
+            <NightModeButton onClick={()=>themeToggler()}>Changer de mode</NightModeButton>
         </FooterContainer>
     )
 }

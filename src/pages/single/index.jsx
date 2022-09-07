@@ -10,7 +10,7 @@ const Single = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://robohash.org/${id}`)
+    /* fetch(`https://robohash.org/${id}`)
       .then((response) => response.blob())
       .then((data) => {
         const reader = new FileReader();
@@ -19,7 +19,7 @@ const Single = () => {
           const base64data = reader.result;
           setImage(base64data);
         };
-      });
+      }); */
 
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((response) => response.json())
@@ -33,7 +33,7 @@ const Single = () => {
     <SingleWrapper>
       <Header />
       <ImageWrapper>
-        <img src={image} alt={`profil de ${name}`} />
+        <img src={`https://robohash.org/${id}`} alt={`profil de ${name}`} />
       </ImageWrapper>
       <h1>
         {name} - {email}
